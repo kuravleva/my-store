@@ -23,12 +23,6 @@ public class StoreServiceImpl implements StoreService {
 
         LessonService lessonService = new LessonServiceImpl(lessonList);
 
-//        LessonService lessonService = new LessonServiceImpl(List.of(
-//                new Lesson("Пилатес", "Попович"),
-//                new Lesson("Растяжка", "Осипова")
-//
-//        ));
-//
         ClientService clientService = new ClientServiceImpl(client, scanner, lessonService);
 
         MenuService menuService = new MenuServiceImpl(clientService, scanner);
